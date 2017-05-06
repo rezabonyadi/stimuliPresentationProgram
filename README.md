@@ -5,4 +5,10 @@ This program simplifies the psychtoolbox by placing a wrapper around this toolbo
 See the help file for details
 
 
-Reza Bonyadi and Maryam Ziaei
+Reza Bonyadi* and Maryam Ziaei
+
+*PhD computer science
+Centre for Advanced Imaging, CAI
+The University of Queensland
+QLD 4072, Australia
+rezabny@gmail.com
