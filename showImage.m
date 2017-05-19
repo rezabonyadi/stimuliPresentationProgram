@@ -18,43 +18,8 @@ presentationInfo.presentedImage=showInfo.imageName;
 presentationInfo.presentedLocation=showInfo.imageLoc;
 
 if(~isempty(operation))
-    if(strcmpi(operation.function,'waitForKey'))
-        if(~isempty(operation.keyToWaitFor))
-            % A code that waits for while the stimili environment in on
-            % top. It waits for the correct key to come.   
-            [~,~,presentationInfo.breakFlag]=...
-                waitAndRegisterFirstKey(inf,operation.keyToWaitFor,...
-                [environment.escapeKey(1),environment.escapeKey(2)],...
-                [environment.pauseKey(1),environment.pauseKey(2)],...
-                [environment.stopKey(1),environment.stopKey(2)]);
-        else % Any key
-            % A code that waits for while the stimili environment in on
-            % top. It waits for any key to come.
-            [~,~,presentationInfo.breakFlag]=...
-                waitAndRegisterFirstKey(inf,[],...
-                [environment.escapeKey(1),environment.escapeKey(2)],...
-                [environment.pauseKey(1),environment.pauseKey(2)],...
-                [environment.stopKey(1),environment.stopKey(2)]);
-        end;
-    end;
-    if(strcmpi(operation.function,'keyAndTime'))
-        % A code that shows the stimuli for a given time and registers the 
-        % keys hit during that time. 
-        [presentationInfo.responseTime,presentationInfo.responseKey,...
-            presentationInfo.breakFlag]=waitAndRegisterFirstKey(operation.timeToPause...
-            ,environment.viableResponseKeys,...
-            [environment.escapeKey(1),environment.escapeKey(2)],...
-            [environment.pauseKey(1),environment.pauseKey(2)],...
-            [environment.stopKey(1),environment.stopKey(2)]);
-    end;
-    if(strcmpi(operation.function,'givenTime'))  
-        % A code that shows the stimuli for a given time.        
-        [~,~,presentationInfo.breakFlag]=...
-            waitAndRegisterFirstKey(operation.timeToPause,[],...
-            [environment.escapeKey(1),environment.escapeKey(2)],...
-            [environment.pauseKey(1),environment.pauseKey(2)],...
-            [environment.stopKey(1),environment.stopKey(2)]);
-    end;
+    presentationInfo=feval(operation.function,operation,...
+    environment,presentationInfo);
 end;
 
 function showMyImage(showInfo)
@@ -164,18 +129,3 @@ else
     end;
 end;
 
-function [breakPressed,pausePressed,stopPressed]=...
-    checkForBreak(responseKey,charToBreak,charToPause,charToStop)
-breakPressed=0;
-stopPressed=0;
-pausePressed=0;
-
-if(responseKey==charToBreak)    
-    breakPressed=1;
-end;
-if(responseKey==charToPause)    
-    pausePressed=1;
-end;
-if(responseKey==charToStop)    
-    stopPressed=1;
-end;

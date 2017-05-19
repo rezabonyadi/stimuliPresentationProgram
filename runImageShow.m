@@ -6,12 +6,15 @@ showInfo.environment=environment;
 
 operation.function=params{1};
 if(strcmpi(operation.function,'waitForKey'))
-    operation.keyToWaitFor=double(params{2}); % '5' or ESC
+    operation.keyToWaitFor=double(params{2}); % key to wait for
 end;
 if(strcmpi(operation.function,'givenTime'))
     operation.timeToPause=str2double(params{2});
 end;
 if(strcmpi(operation.function,'keyAndTime'))
+    operation.timeToPause=str2double(params{2});
+end;
+if(strcmpi(operation.function,'keyAndTimePass'))
     operation.timeToPause=str2double(params{2});
 end;
 

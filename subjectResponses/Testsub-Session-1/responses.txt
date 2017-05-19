@@ -1,23 +1,20 @@
 Subject name: Testsub-Session-1
 Subject age: 65
 Subject gender: M
-Subject run files: 1,2
-Vaiable response characters map: 49= '1',50= '2',
+Subject run files: 1
+Vaiable response characters map: 106= 'j',107= 'k',
 ---------------
-1;Text in a specific rectangle;LB;1.915354;No key is saved.
-1;This text will stay for 2 seconds. The onset is saved. ;MM;3.955215;No key is saved.
-1;This text will stay for 2 seconds. The onset is saved. ;MM;5.978376;No key is saved.
-1;3.jpg;LM;8.035076;"Whatever from here cell on will be saved as comments; seperated by ""semicolon"".";Like this and previous.;You may use this ability to save some details about your trial.
-1;2.jpg;LB;9.055089;K;F
-1;3.jpg;MT;10.074882;Some other comments.
-1;CrossB.jpg;MM;11.094955;Some other comments.;And more
-1;1.jpg;MM;17.114254;1.102285;50;"This one also saves the key inputs; as it is ""keyAndTime""."
-1;Cross.jpg;MM;19.137533;-1.000000;-1;"This one also saves the key inputs; as it is ""keyAndTime""."
-1;Cross.jpg;MM;19.655739;No key is saved.
-1;Great Job! Staying here for 3 seconds.;MM;21.177243;
-2;Text in a specific rectangle;RB;1.547325;No key is saved.
-2;This text will stay for 2 seconds. The onset is saved. ;MM;3.570225;No key is saved.
-2;This text will stay for 2 seconds. The onset is saved. ;MM;5.593415;No key is saved.
-2;3.jpg;LM;7.616623;"Whatever from here cell on will be saved as comments; seperated by ""semicolon"".";Like this and previous.;You may use this ability to save some details about your trial.
-2;2.jpg;LB;8.636629;K;F
-2;The run was skipped at ;10.525947
+1;Text in a specific rectangle;LB;1.534847;No key is saved.
+1;This text will stay for 2 seconds. The onset is saved. ;LT;3.553167;No key is saved.
+1;This text will stay for 2 seconds. The onset is saved. ;RB;5.568693;No key is saved.
+1;3.jpg;RB;7.603067;"Whatever from here cell on will be saved as comments; seperated by ""semicolon"".";Like this and previous.;You may use this ability to save some details about your trial.
+1;2.jpg;LB;8.620076;K;F
+1;3.jpg;LT;9.637137;Some other comments.
+1;CrossB.jpg;RT;10.654043;Some other comments.;And more
+1;1.jpg;RT;13.671052;-1.000000;-1;"This one also saves the key inputs; as it is ""keyAndTime""."
+1;3.jpg;RB;16.688017;
+1;2.jpg;LB;17.705377;No key is saved.
+1;3.jpg;LT;18.722788;
+1;CrossB.jpg;RT;19.739793;
+1;1.jpg;RT;22.756827;-1.000000;-1;
+1;The run was skipped at ;28.881780
