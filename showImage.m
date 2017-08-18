@@ -23,43 +23,52 @@ if(~isempty(operation))
 end;
 
 function showMyImage(showInfo)
+allOperations = split(showInfo.imagePath, ';');
+numOperations = length(allOperations);
+allLocations = split(showInfo.imageLoc, ';');
+content = split(showInfo.imageName, ';');
+
 environment=showInfo.environment;
 if(strcmpi(environment.name,'psychToolbox')) 
-    % Use psychtoolbox for presentation. Alternatives could be also
-    % implemented.
-    if(strfind(lower(showInfo.imagePath),'justtext'))
-        x=strsplit(lower(showInfo.imagePath),'-');
-%         [s1,s2,~]=size(theImage);
-        if(strcmp(showInfo.imageLoc,'screen'))
-            dstRects=[];
+    for operationCounter = 1:numOperations
+        % Use psychtoolbox for presentation. Alternatives could be also
+        % implemented.
+        if(strfind(lower(allOperations{operationCounter}),'justtext'))
+            x=strsplit(lower(allOperations{operationCounter}),'-');
+    %         [s1,s2,~]=size(theImage);
+            if(strcmp(allLocations{operationCounter},'screen'))
+                dstRects=[];
+            else
+                baseRect = [0 0 100 100];
+                location=strncmp(allLocations{operationCounter},environment.directions,2);
+                convLocation=environment.directionsRects(location,:); 
+                dstRects=CenterRectOnPointd(baseRect, convLocation(1), convLocation(2));
+            end;
+    %         [left top right bottom];
+            if(length(x)>1)
+                Screen('TextSize', environment.window, str2double(x(2)));
+            else
+                % Standard font size
+                Screen('TextSize', environment.window, environment.fontSize);
+            end;
+            DrawFormattedText(environment.window, ...
+                content{operationCounter}, 'center', 'center',...
+                environment.white,[],[],[],[],[],dstRects);
         else
-            baseRect = [0 0 100 100];
-            location=strncmp(showInfo.imageLoc,environment.directions,2);
+            theImageAddress=[allOperations{operationCounter} ...
+                content{operationCounter}];
+            theImage = imread(theImageAddress);
+            [s1,s2,~]=size(theImage);
+            baseRect = [0 0 s1 s2];
+            location=strncmp(allLocations{operationCounter},environment.directions,2);
             convLocation=environment.directionsRects(location,:); 
             dstRects=CenterRectOnPointd(baseRect, convLocation(1), convLocation(2));
-        end;
-%         [left top right bottom];
-        if(length(x)>1)
-            Screen('TextSize', environment.window, str2double(x(2)));
-        else
-            % Standard font size
-            Screen('TextSize', environment.window, environment.fontSize);
-        end;
-        DrawFormattedText(environment.window, showInfo.imageName, 'center', 'center',...
-            showInfo.environment.white,[],[],[],[],[],dstRects);
-    else
-        theImageAddress=[showInfo.imagePath showInfo.imageName];
-        theImage = imread(theImageAddress);
-        [s1,s2,~]=size(theImage);
-        baseRect = [0 0 s1 s2];
-        location=strncmp(showInfo.imageLoc,environment.directions,2);
-        convLocation=environment.directionsRects(location,:); 
-        dstRects=CenterRectOnPointd(baseRect, convLocation(1), convLocation(2));
-%         disp(baseRect);
-%         disp(dstRects);
-        % A code that shows the stimuli within the environment
-        imageTexture = Screen('MakeTexture', environment.window, theImage);
-        Screen('DrawTexture', environment.window, imageTexture, [], dstRects, 0);
+    %         disp(baseRect);
+    %         disp(dstRects);
+            % A code that shows the stimuli within the environment
+            imageTexture = Screen('MakeTexture', environment.window, theImage);
+            Screen('DrawTexture', environment.window, imageTexture, [], dstRects, 0);
+        end;        
     end;
     Screen('Flip', environment.window);
 end;

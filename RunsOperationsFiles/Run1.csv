@@ -2,10 +2,10 @@ ImageShow,waitForKey,9,justText,"This is like an instruction here. \n\n The comp
 ImageShow,givenTime,2,justText-10,Text in a specific rectangle,LB,S,No key is saved.,,
 ImageShow,givenTime,2,justText,This text will stay for 2 seconds. The onset is saved. ,LT,S,No key is saved.,,
 ImageShow,givenTime,2,justText-20,This text will stay for 2 seconds. The onset is saved. ,RB,S,No key is saved.,,
-ImageShow,givenTime,1,Figures\,3.jpg,RB,S,"Whatever from here cell on will be saved as comments, seperated by ""semicolon"".",Like this and previous.,You may use this ability to save some details about your trial.
+ImageShow,givenTime,1,Figures\;justText,3.jpg;This  is a text,RB;LB,S,"Whatever from here cell on will be saved as comments, seperated by ""semicolon"".",Like this and previous.,You may use this ability to save some details about your trial.
 ImageShow,givenTime,1,Figures\,2.jpg,LB,S,K,F,
 ImageShow,givenTime,1,Figures\,3.jpg,LT,S,Some other comments.,,
-ImageShow,givenTime,3,Figures\,CrossB.jpg,RT,S,Some other comments.,And more,
+ImageShow,givenTime,3,Figures\;justText-20,CrossB.jpg;some texts,RT;LB,S,Some other comments.,And more,
 ImageShow,keyAndTime,3,Figures\,1.jpg,RT,S,"This one also saves the key inputs, as it is ""keyAndTime"".",,
 ImageShow,givenTime,1,Figures\,3.jpg,RB,S,,,
 ImageShow,givenTime,1,Figures\,2.jpg,LB,S,No key is saved.,,
