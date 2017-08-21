@@ -1,0 +1,7 @@
+environment=psychToolbox
+viable keys=J K
+screen to use=1
+Font size=40
+Directions=RT,RB,LB,LT
+Rects=975,192;975,576;325,576;325,192
+Locations format=P

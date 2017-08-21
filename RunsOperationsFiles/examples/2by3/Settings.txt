@@ -1,0 +1,7 @@
+environment=psychToolbox
+viable keys=1 2
+screen to use=2
+Font size=40
+Directions=LT,MT,RT,LB,MB,RB
+Rects=0.16,0.25;0.5,0.25;0.83,0.25;0.16,0.75;0.5,0.75;0.83,0.75
+Locations format=R

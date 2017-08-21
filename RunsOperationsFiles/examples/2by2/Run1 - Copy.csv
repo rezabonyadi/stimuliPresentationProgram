@@ -1,0 +1,12 @@
+ImageShow,waitForKey,9,justText,"This is like an instruction here. \n\n The computer is waitning for the character ""9"". \n\n The onset is not saved! Hold  ""Esc"" to jump the run. \n\n Hold  ""o"" to exit.",screen,D,No key is saved.,,
+ImageShow,givenTime,2,justText-10,Text in a specific rectangle,LB,S,No key is saved.,,
+ImageShow,givenTime,2,justText,This text will stay for 2 seconds. The onset is saved. ,MM,S,No key is saved.,,
+ImageShow,givenTime,2,justText-20,This text will stay for 2 seconds. The onset is saved. ,MM,S,No key is saved.,,
+ImageShow,givenTime,1,Figures\,3.jpg,LM,S,"Whatever from here cell on will be saved as comments, seperated by ""semicolon"".",Like this and previous.,You may use this ability to save some details about your trial.
+ImageShow,givenTime,1,Figures\,2.jpg,LB,S,K,F,
+ImageShow,givenTime,1,Figures\,3.jpg,MT,S,Some other comments.,,
+ImageShow,givenTime,6,Figures\,CrossB.jpg,MM,S,Some other comments.,And more,
+ImageShow,keyAndTime,2,Figures\,1.jpg,MM,S,"This one also saves the key inputs, as it is ""keyAndTime"".",,
+ImageShow,keyAndTime,0.5,Figures\,Cross.jpg,MM,S,"This one also saves the key inputs, as it is ""keyAndTime"".",,
+ImageShow,givenTime,1.5,Figures\,Cross.jpg,MM,S,No key is saved.,,
+ImageShow,givenTime,3,justText,Great Job! Staying here for 3 seconds.,MM,S,,,

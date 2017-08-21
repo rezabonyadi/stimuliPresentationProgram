@@ -1,0 +1,12 @@
+ImageShow,waitForKey,9,justText,This is the second run.\n\n Hit 9 to start,screen,S,No key is saved.,,
+ImageShow,givenTime,2,justText-10,Text in a specific rectangle,RB,S,No key is saved.,,
+ImageShow,givenTime,2,justText,This text will stay for 2 seconds. The onset is saved. ,LB,S,No key is saved.,,
+ImageShow,givenTime,2,justText-20,This text will stay for 2 seconds. The onset is saved. ,RT,S,No key is saved.,,
+ImageShow,givenTime,1,Figures\,3.jpg,LT,S,"Whatever from here cell on will be saved as comments, seperated by ""semicolon"".",Like this and previous.,You may use this ability to save some details about your trial.
+ImageShow,givenTime,1,Figures\,2.jpg,LB,S,K,F,
+ImageShow,givenTime,1,Figures\,3.jpg,RT,S,Some other comments.,,
+ImageShow,givenTime,6,Figures\,CrossB.jpg,RB,S,Some other comments.,And more,
+ImageShow,keyAndTime,2,Figures\,1.jpg,LB,S,"This one also saves the key inputs, as it is ""keyAndTime"".",,
+ImageShow,keyAndTime,0.5,Figures\,Cross.jpg,RB,S,"This one also saves the key inputs, as it is ""keyAndTime"".",,
+ImageShow,givenTime,1.5,Figures\,Cross.jpg,RB,S,No key is saved.,,
+ImageShow,givenTime,3,justText,Great Job! Staying here for 3 seconds.,LT,S,,,
