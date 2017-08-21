@@ -39,9 +39,24 @@ if(strcmpi(environment.name,'psychToolbox'))
     sca;
     [environment.window, environment.windowRect] = PsychImaging('OpenWindow', ...
         environment.screenNumber, environment.bkColor);
+    if(environmentSettings.locationStyle == 'P')
+        environment.directions=environmentSettings.directions;
+        environment.directionsRects=environmentSettings.directionsRects;
+    end;
+    if(environmentSettings.locationStyle == 'R')
+        environment.directions=environmentSettings.directions;
+        i = 1;
+        for d=environmentSettings.directions
+            environment.directionsRects(i,1) = ...
+            environment.windowRect(3) * ...
+            environmentSettings.directionsRects(i, 1);
+            environment.directionsRects(i,2) = ...
+            environment.windowRect(4) * ...
+            environmentSettings.directionsRects(i, 2);        
+            i = i + 1;
+        end;        
+    end;
     
-    environment.directions=environmentSettings.directions;
-    environment.directionsRects=environmentSettings.directionsRects;
     
 %     environment.directions={'MT','RT','RM','RB','MB','LB','LM','LT','MM'};
 %     environment.directionsRects=zeros(9,2);

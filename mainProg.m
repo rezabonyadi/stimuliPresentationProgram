@@ -79,38 +79,11 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 rng('shuffle');
 addpath('functionalities/');
-fid=fopen('Settings.txt','rt');
-line=fgetl(fid);
-i=1;
-mySettings=[];
-while(ischar(line))
-    strs=strsplit(line,'=');
-    mySettings{i}=strs{2};
-    line=fgetl(fid);
-    i=i+1;
-end;
-fclose(fid);
-
 screens = Screen('Screens');
 disp(['Available screens are ' num2str(screens)]);
-% subInfo.environmentSettings.name='noShow';
-subInfo.environmentSettings.name=mySettings{1};
-keys=strsplit(mySettings{2},' ');
-subInfo.environmentSettings.responseKeys=[];
-for i=1:length(keys)
-    subInfo.environmentSettings.responseKeys(i)=double(keys{i});
-end;
-subInfo.environmentSettings.screenNumber=str2num(mySettings{3});
-disp(['Selected screen is ' num2str(subInfo.environmentSettings.screenNumber)]);
-subInfo.environmentSettings.fontSize=str2num(mySettings{4});
-% subInfo.environmentSettings.shift=str2num(mySettings{5});
-subInfo.environmentSettings.directions=strsplit(mySettings{5},',');
-orientations=strsplit(mySettings{6},';');
-for i=1:length(orientations)
-    num=strsplit(orientations{i},',');
-    subInfo.environmentSettings.directionsRects(i,1)=str2double(num(1));
-    subInfo.environmentSettings.directionsRects(i,2)=str2double(num(2));
-end;
+
+subInfo.environmentSettings = getSettings();
+
 if(isnumeric(handles.edit1)) % This is Matlab 2013, handels are numeric!
     obj=get(handles.edit1);
 else
@@ -129,7 +102,7 @@ if(isnumeric(handles.edit4)) % This is Matlab 2013, handels are numeric!
 else
     obj=handles.edit4;
 end;
-subInfo.age= obj.String;
+subInfo.age=obj.String;
 if(isnumeric(handles.popupmenu1)) % This is Matlab 2013, handels are numeric!
     obj=get(handles.popupmenu1);
 else
