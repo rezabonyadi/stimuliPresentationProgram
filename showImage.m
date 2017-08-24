@@ -23,10 +23,10 @@ if(~isempty(operation))
 end;
 
 function showMyImage(showInfo)
-allOperations = split(showInfo.imagePath, ';');
+allOperations = strsplit(showInfo.imagePath, ';');
 numOperations = length(allOperations);
-allLocations = split(showInfo.imageLoc, ';');
-content = split(showInfo.imageName, ';');
+allLocations = strsplit(showInfo.imageLoc, ';');
+content = strsplit(showInfo.imageName, ';');
 
 environment=showInfo.environment;
 if(strcmpi(environment.name,'psychToolbox')) 
