@@ -40,9 +40,9 @@ for i=1:length(experimentInfo.runExcelFiles)
         end;
         % If ESC then break: TBD
     end;
-    save(['subjectResponses\' fileInfo.fileName '\Run' num2str(i) '.mat']...
-        ,'intermediateResults'); % Saves the results of each run as a mat file.
     
+    resName = ['Run' num2str(i)];
+    saveAsTable(intermediateResults, resName, fileInfo);
     pause(1); % Ensure the results have been saved.
     if(stopFlag)
         break;
