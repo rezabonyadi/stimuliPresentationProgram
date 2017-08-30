@@ -1,0 +1,17 @@
+presentationOnset,presentedImage,presentedLocation,responseTime,responseKey,breakFlag,otherNotes
+0.0235195422288699,"This is like an instruction here. \n\n The computer is waitning for the character ""9"". \n\n The onset is not saved! Hold  ""Esc"" to jump the run. \n\n Hold  ""o"" to exit.",screen,,,0,No key is saved.
+0.966619653222264,Text in a specific rectangle,LT,,,0,No key is saved.
+2.97356410183989,This text will stay for 2 seconds. The onset is saved. ,MT,,,0,No key is saved.
+4.9846045492268,This text will stay for 2 seconds. The onset is saved. ,RT,,,0,No key is saved.
+6.99234343892028,3.jpg;Hit 1  Hit 2  Hit 3,MT;MB,,,0,"Whatever from here cell on will be saved as comments; seperated by ""semicolon"". ";Like this and previous.;You may use this ability to save some details about your trial.
+7.99808270480144,2.jpg,RB,,,0,K;F
+9.00405753868694,3.jpg,LT,,,0,Some other comments.
+10.0109644286304,CrossB.jpg;some texts if you like,LT;MB,,,0,Some other comments.;And more
+13.0220805943044,1.jpg;Hit 1  Hit 2  Hit 3,RT;MB,0.409751013037749,49,0,"This one also saves the key inputs; as it is ""keyAndTime""."
+16.0284613623402,3.jpg,RB,,,0,
+17.0345485717788,2.jpg,LB,,,0,No key is saved.
+18.0411432740227,3.jpg,LT,,,0,
+19.0464711973044,CrossB.jpg,RT,,,0,
+22.0529129606271,1.jpg;Hit 1  Hit 2  Hit 3,RT;MB,-1,-1,0,
+27.0579923957206,Cross.jpg,LB,,,0,
+28.5636712672537,Great Job! Staying here for 3 seconds.,RT,,,0,
