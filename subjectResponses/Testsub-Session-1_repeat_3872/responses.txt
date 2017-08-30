@@ -1,7 +1,0 @@
-Subject name: Testsub-Session-1_repeat_3872
-Subject age: 65
-Subject gender: M
-Subject run files: 1
-Vaiable response characters map: 106= 'j',107= 'k',
----------------
-1;The run was stopped at ;3.859037
